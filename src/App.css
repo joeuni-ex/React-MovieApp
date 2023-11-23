@@ -43,6 +43,9 @@
   border: none;
   cursor: pointer;
 }
+.footer {
+  height: 150px;
+}
 
 @media screen and (max-width: 479px) {
   .searchSection > form {
