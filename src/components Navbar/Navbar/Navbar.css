@@ -7,7 +7,7 @@
 }
 
 .navbar > h1 {
-  font-size: 30px;
+  font-size: 35px;
   color: var(--heading_color);
 }
 .navbar_links {
@@ -33,7 +33,7 @@
 
 @media screen and (max-width: 479px) {
   .navbar > h1 {
-    font-size: 17px;
+    font-size: 21px;
     color: var(--heading_color);
   }
 
