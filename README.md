@@ -1,8 +1,6 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## TMDB API를 활용한 Moive App 제작 
+   인기순 , 평점순, 상영예정으로 조회가능하며, 원하는 옵셥으로 정렬도 가능하다. 
+   검색은 2자 이상 검색창에 입력하면 검색어로 제목을 조회하여 결과가 출력된다. 
+   영화 포스터를 클릭하면 TMDB 영화 상세보기 페이지로 이동한다. 
