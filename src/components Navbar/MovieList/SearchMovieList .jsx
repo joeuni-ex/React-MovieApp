@@ -52,7 +52,7 @@ export default function SearchMovieList({ type, title, emoji }) {
 
   //한 번만 실행
   useEffect(() => {
-    if (searchValue.length > 3) {
+    if (searchValue.length >= 2) {
       fetchMovies(searchValue);
     }
   }, [searchValue]);
