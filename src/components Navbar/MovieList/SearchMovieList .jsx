@@ -1,11 +1,11 @@
 import "./MovieList.css";
-import Fire from "../../assets/fire.png";
 import MovieCard from "./MovieCard";
 import { useEffect, useState } from "react";
 import _ from "lodash";
 
-export default function MovieList({ type, title, emoji }) {
+export default function SearchMovieList({ type, title, emoji }) {
   const [movies, setMovies] = useState([]); //API로 받아온 영화 목록
+  const [searchValue, setSearchValue] = useState(""); //검색어
   const [filterMovies, setFilterMovies] = useState([]);
   const [minRating, setMinRating] = useState(0);
   const [sort, setSort] = useState({
@@ -14,11 +14,11 @@ export default function MovieList({ type, title, emoji }) {
   }); //정렬
 
   //모든 영화 가져오기
-  const fetchMovies = async () => {
+  const fetchMovies = async (searchValue) => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${type}?api_key=${
+      `https://api.themoviedb.org/3/search/movie?api_key=${
         import.meta.env.VITE_MOVIE_API_KEY
-      }&language=ko`
+      }&language=ko&page=1&query=${searchValue}`
     );
     const data = await response.json();
     setMovies(data.results); //영화 목록에 담기
@@ -52,8 +52,15 @@ export default function MovieList({ type, title, emoji }) {
 
   //한 번만 실행
   useEffect(() => {
-    fetchMovies();
-  }, [type]);
+    if (searchValue.length > 3) {
+      fetchMovies(searchValue);
+    }
+  }, [searchValue]);
+
+  //검색어 저장
+  const handleChange = (e) => {
+    setSearchValue(e.target.value);
+  };
 
   return (
     <section className="movie_list" id={`${type}`}>
@@ -116,6 +123,17 @@ export default function MovieList({ type, title, emoji }) {
           </select>
         </div>
       </header>
+      <div className="searchSection">
+        <form>
+          <input
+            onChange={handleChange}
+            value={searchValue}
+            type="text"
+            className="search"
+            placeholder="검색어를 입력하세요..."
+          />
+        </form>
+      </div>
       <div className="movie_cards">
         {filterMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />

@@ -1,0 +1,57 @@
+.video-box {
+  position: relative; /* absolute는 부모가 relative일 때 부모를 따라간다. */
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* 부모에 맞게 꽉 채운다. */
+  height: 100%;
+}
+
+.opacity {
+  opacity: 0.8;
+}
+
+.video-text {
+  font-size: 3.2rem;
+  left: 3%;
+  position: absolute;
+  top: 55%;
+  color: white;
+}
+.overview {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  width: 40%;
+  color: white;
+}
+.button {
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+@media screen and (max-width: 479px) {
+  .video-text {
+    font-size: 1.5rem;
+    left: 3%;
+    position: absolute;
+    top: 55%;
+    color: white;
+  }
+  .overview {
+    font-size: 0.5rem;
+    padding: 0.5rem 0;
+    width: 40%;
+    color: white;
+  }
+}
+@media screen and (max-width: 480px) and (max-width: 1023px) {
+}

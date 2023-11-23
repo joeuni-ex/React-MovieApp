@@ -5,24 +5,15 @@ import Fire from "./assets/fire.png";
 import Star from "./assets/glowing-star.png";
 import Party from "./assets/partying-face.png";
 import { Route, Routes } from "react-router-dom";
+import SearchMovieList from "./components Navbar/MovieList/SearchMovieList ";
+import MovieVideo from "./components Navbar/MovieList/MovieVideo";
 
 function App() {
   return (
     <>
       <div className="app">
         <Navbar />
-        <div className="searchSection">
-          <form>
-            <input
-              type="text"
-              className="search"
-              placeholder="검색어를 입력하세요..."
-            />
-            <button type="submit" className="searchBtn">
-              검색
-            </button>
-          </form>
-        </div>
+        <MovieVideo />
         <Routes>
           <Route
             path="/"
@@ -38,6 +29,12 @@ function App() {
             path="/upcoming"
             element={
               <MovieList type="upcoming" title="예정작품" emoji={Party} />
+            }
+          />
+          <Route
+            path="/search"
+            element={
+              <SearchMovieList type="search" title="검색" emoji={Party} />
             }
           />
         </Routes>
