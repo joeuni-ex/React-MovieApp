@@ -54,24 +54,4 @@
   }
 }
 @media screen and (max-width: 480px) and (max-width: 1023px) {
-  .navbar > h1 {
-    font-size: 15px;
-    color: var(--heading_color);
-  }
-
-  .navbar_links > a {
-    display: flex;
-    align-items: center;
-    font-size: 10px;
-    font-weight: 500;
-    color: var(--body_color);
-    text-decoration: none;
-    padding: 0 15px;
-  }
-
-  .navbar_emoji {
-    width: 15px;
-    height: 15px;
-    margin-left: 7px;
-  }
 }
