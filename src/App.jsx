@@ -1,12 +1,12 @@
 import "./App.css";
-import MovieList from "./components Navbar/MovieList/MovieList";
-import Navbar from "./components Navbar/Navbar/Navbar";
+import MovieList from "./components/MovieList/MovieList";
+import Navbar from "./components/Navbar/Navbar";
 import Fire from "./assets/fire.png";
 import Star from "./assets/glowing-star.png";
 import Party from "./assets/partying-face.png";
 import { Route, Routes } from "react-router-dom";
-import SearchMovieList from "./components Navbar/MovieList/SearchMovieList ";
-import MovieVideo from "./components Navbar/MovieList/MovieVideo";
+import SearchMovieList from "./components/MovieList/SearchMovieList ";
+import MovieVideo from "./components/MovieList/MovieVideo";
 
 function App() {
   return (
