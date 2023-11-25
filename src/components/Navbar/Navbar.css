@@ -1,13 +1,19 @@
 .navbar {
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
   border-bottom: 1px solid #e6e6e6;
+  height: 10%;
+  width: 100%;
+  background-color: var(--body_backgroud);
+  z-index: 1;
 }
 
 .navbar > h1 {
-  font-size: 35px;
+  font-size: 4.2rem;
   color: var(--heading_color);
 }
 .navbar_links {
@@ -18,7 +24,7 @@
 .navbar_links > a {
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
   color: var(--body_color);
   text-decoration: none;
@@ -26,32 +32,45 @@
 }
 
 .navbar_emoji {
-  width: 25px;
-  height: 25px;
+  width: 2rem;
+  height: 2rem;
   margin-left: 7px;
 }
 
 @media screen and (max-width: 479px) {
   .navbar > h1 {
     font-size: 15px;
-    color: var(--heading_color);
   }
 
   .navbar_links > a {
-    display: flex;
-    align-items: center;
     font-size: 11px;
-    font-weight: 500;
-    color: var(--body_color);
-    text-decoration: none;
-    padding: 0 15px;
   }
-
   .navbar_emoji {
-    width: 15px;
-    height: 15px;
+    width: 1rem;
+    height: 1rem;
     margin-left: 7px;
   }
 }
-@media screen and (max-width: 480px) and (max-width: 1023px) {
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  .navbar > h1 {
+    font-size: 1.5rem;
+  }
+
+  .navbar_links > a {
+    font-size: 1rem;
+  }
+  .navbar_emoji {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 7px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar > h1 {
+    font-size: 2.5rem;
+  }
+
+  .navbar_links > a {
+    font-size: 1.5rem;
+  }
 }

@@ -1,5 +1,5 @@
 .movie_list_header {
-  margin-top: 30px;
+  margin-top: 58%;
   padding: 10px 30px;
   justify-content: space-between;
   margin-bottom: 5px;
@@ -42,6 +42,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  z-index: -1;
 }
 
 @media screen and (max-width: 479px) {
@@ -66,5 +67,42 @@
     margin: 0 10px;
   }
 }
-@media screen and (max-width: 480px) and (max-width: 1023px) {
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  .movie_list_heading {
+    font-size: 1.8rem;
+    color: var(--heading_color);
+  }
+
+  .movie_filter {
+    list-style: none;
+    font-size: 14px;
+  }
+  .movie_sorting {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    height: 30px;
+    padding: 0 5px;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .movie_list_header {
+    margin-top: 56%;
+  }
+  .movie_list_heading {
+    font-size: 1.8rem;
+  }
+
+  .movie_filter {
+    font-size: 1.3rem;
+  }
+  .movie_sorting {
+    font-size: 1.3rem;
+    height: 45px;
+  }
 }
