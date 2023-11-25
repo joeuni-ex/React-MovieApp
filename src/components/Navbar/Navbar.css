@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
-  border-bottom: 1px solid #e6e6e6;
-  height: 10%;
+  border-bottom: 1px solid var(--body_backgroud);
+  height: 8%;
   width: 100%;
   background-color: var(--body_backgroud);
   z-index: 1;
@@ -67,10 +67,10 @@
 }
 @media screen and (min-width: 1024px) {
   .navbar > h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .navbar_links > a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
