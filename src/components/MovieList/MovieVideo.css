@@ -43,6 +43,11 @@
   border: none;
   background-color: rgb(109, 109, 109);
   color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(177, 174, 174);
 }
 
 @media screen and (max-width: 479px) {

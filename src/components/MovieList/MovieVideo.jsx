@@ -48,7 +48,11 @@ const MovieVideo = () => {
         allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-      <VideoText movieTitle={movieTitle} movieOverview={movieOverview} />
+      <VideoText
+        movieTitle={movieTitle}
+        movieOverview={movieOverview}
+        movieId={id}
+      />
     </div>
   );
 };

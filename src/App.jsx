@@ -13,32 +13,35 @@ function App() {
     <>
       <div className="app">
         <Navbar />
-        <MovieVideo />
-        <Routes>
-          <Route
-            path="/"
-            element={<MovieList type="popular" title="인기작품" emoji={Fire} />}
-          />
-          <Route
-            path="/top_rated"
-            element={
-              <MovieList type="top_rated" title="최고평점" emoji={Star} />
-            }
-          />
-          <Route
-            path="/upcoming"
-            element={
-              <MovieList type="upcoming" title="예정작품" emoji={Party} />
-            }
-          />
-          <Route
-            path="/search"
-            element={
-              <SearchMovieList type="search" title="검색" emoji={Party} />
-            }
-          />
-        </Routes>
-
+        <div>
+          <MovieVideo />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <MovieList type="popular" title="인기작품" emoji={Fire} />
+              }
+            />
+            <Route
+              path="/top_rated"
+              element={
+                <MovieList type="top_rated" title="최고평점" emoji={Star} />
+              }
+            />
+            <Route
+              path="/upcoming"
+              element={
+                <MovieList type="upcoming" title="예정작품" emoji={Party} />
+              }
+            />
+            <Route
+              path="/search"
+              element={
+                <SearchMovieList type="search" title="검색" emoji={Party} />
+              }
+            />
+          </Routes>
+        </div>
         <footer className="footer"></footer>
       </div>
     </>
