@@ -7,6 +7,7 @@ const VideoText = ({ movieTitle, movieOverview }) => {
       <div className="overview">
         {movieOverview.slice(0, 100) + "...더보기"}
       </div>
+      <button className="button">상세보기</button>
     </div>
   );
 };
